@@ -10,6 +10,7 @@ nltk.download('stopwords')
 #loading models
 clf = pickle.load(open('clf.pkl','rb'))
 tfidfd = pickle.load(open('tfidf.pkl','rb'))
+
 def clean_resume(resume_text):
     clean_text = re.sub('http\S+\s*', ' ', resume_text)
     clean_text = re.sub('RT|cc', ' ', clean_text)
